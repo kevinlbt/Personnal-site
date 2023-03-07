@@ -6,7 +6,17 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitfa83bedd9ffac18592f2415d9a47fa6e
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '2a3c2110e8e0295330dc3d11a4cbc4cb' => __DIR__ . '/..' . '/php-webdriver/webdriver/lib/Exception/TimeoutException.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Process\\' => 26,
+        ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
@@ -15,9 +25,21 @@ class ComposerStaticInitfa83bedd9ffac18592f2415d9a47fa6e
         array (
             'Kevinlb\\MySite\\' => 15,
         ),
+        'F' => 
+        array (
+            'Facebook\\WebDriver\\' => 19,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
@@ -25,6 +47,10 @@ class ComposerStaticInitfa83bedd9ffac18592f2415d9a47fa6e
         'Kevinlb\\MySite\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Facebook\\WebDriver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-webdriver/webdriver/lib',
         ),
     );
 

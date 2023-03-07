@@ -15,16 +15,15 @@ $text-color: white;
 $white-back: #d9e2f7;
 
 
-@mixin btn {
+@mixin btn ($fs){
     background-color: $btn-color;
     color: #fff;
     padding: 10px 20px;
     margin-bottom: 0.5vw;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: $fs;
     font-family: $title-font;
-    transition: transform 0.4s ease-out;
     border: none;
     cursor: pointer;
     --c: #cc5216; /* the color */
@@ -41,8 +40,10 @@ $white-back: #d9e2f7;
         #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
         conic-gradient(at left var(--_s) bottom var(--_s),
         #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
-    transform: translate(calc(var(--d)/-1),var(--d));
-    clip-path: 
+    -webkit-transform: translate(calc(var(--d)/-1),var(--d));
+    -ms-transform: translate(calc(var(--d)/-1),var(--d));
+            transform: translate(calc(var(--d)/-1),var(--d));
+    -webkit-clip-path: 
         polygon(
         var(--d) 0%, 
         var(--d) 0%, 
@@ -51,6 +52,17 @@ $white-back: #d9e2f7;
         100% calc(100% - var(--d)),
         var(--d) calc(100% - var(--d))
         );
+            clip-path: 
+        polygon(
+        var(--d) 0%, 
+        var(--d) 0%, 
+        100% 0%, 
+        100% calc(100% - var(--d)),
+        100% calc(100% - var(--d)),
+        var(--d) calc(100% - var(--d))
+        );
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 
 }
@@ -61,11 +73,11 @@ $white-back: #d9e2f7;
                 transform: scale($x);
 }
 
-@mixin icone ($x,$y) {
+@mixin icone ($x,$y,$s) {
     position: absolute;
     top: $x;
     left: $y;
-    font-size: 2.5vw;
+    font-size: $s;
     z-index: 7;
     border: none;
     border-radius: 2px;
@@ -89,7 +101,9 @@ $white-back: #d9e2f7;
         position: absolute;
         top: $x;
         left: $y;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
       }
       
       .big {
@@ -100,8 +114,11 @@ $white-back: #d9e2f7;
 
         .circlebis {
             .layer-1 {
-                transform: rotate($deg);
-                animation: $name ease-in-out 3s;
+                -webkit-transform: rotate($deg);
+                    -ms-transform: rotate($deg);
+                        transform: rotate($deg);
+                -webkit-animation: $name ease-in-out 3s;
+                        animation: $name ease-in-out 3s;
             }
             .item {
                 width: 8.11vw;
@@ -117,8 +134,11 @@ $white-back: #d9e2f7;
                     border-radius: 50%;
                     clip: rect(0, 4.26vw, 8.5vw, 0);
                     background-color: white;
-                    transform: rotate($deg);
-                    animation: $name ease-in-out 3s;
+                    -webkit-transform: rotate($deg);
+                        -ms-transform: rotate($deg);
+                            transform: rotate($deg);
+                    -webkit-animation: $name ease-in-out 3s;
+                            animation: $name ease-in-out 3s;
                 }
                 @include keyframes($name,$deg)
             }
@@ -130,7 +150,8 @@ $white-back: #d9e2f7;
         width: 5.5vw;
         height: 5.5vw;
         z-index: 2;
-        box-shadow: 0px 0px 20px 1px #000000 inset;
+        -webkit-box-shadow: 0px 0px 20px 1px #000000 inset;
+                box-shadow: 0px 0px 20px 1px #000000 inset;
       }
       
       .small {
@@ -195,9 +216,15 @@ $white-back: #d9e2f7;
     }
     div {
 
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         img {
             width: 70%;
@@ -220,12 +247,21 @@ $white-back: #d9e2f7;
     background-repeat: repeat;
     background-size: contains;
     
+    .header_mobile {
+        display: none;
+    }
 
-    nav {
+    .header_desktop {
         background-color: $nav-color;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 0 20px;
         color: $text-color;
         border-bottom: 1px solid black;
@@ -239,6 +275,8 @@ $white-back: #d9e2f7;
         }
         ul {
             list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin: 0;
             padding: 0;
@@ -262,12 +300,23 @@ $white-back: #d9e2f7;
             }
         }
         .btn {
-            @include btn;
+            @include btn(1.5vw);
         }
 
         .btn:hover {
-            transform: translate(0,0);
-            clip-path: 
+            -webkit-transform: translate(0,0);
+                -ms-transform: translate(0,0);
+                    transform: translate(0,0);
+            -webkit-clip-path: 
+                polygon(
+                0% var(--d), 
+                var(--d) 0%, 
+                100% 0%, 
+                100% calc(100% - var(--d)), 
+                calc(100% - var(--d)) 100%, 
+                0% 100%
+            );
+                    clip-path: 
                 polygon(
                 0% var(--d), 
                 var(--d) 0%, 
@@ -281,16 +330,31 @@ $white-back: #d9e2f7;
 
     .head {
         
+        display: -webkit-box;
+        
+        display: -ms-flexbox;
+        
         display: flex;
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
         padding-top: 7vw;
         padding-bottom: 7vw;
 
             .bloc1 {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: end;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: end;
+                    -ms-flex-align: end;
+                        align-items: end;
                 width: 40%;
                 margin: 0.3vw;
                 padding: 2vw 0 2vw 4vw;
@@ -308,14 +372,26 @@ $white-back: #d9e2f7;
                     color: $text-color;
                     margin: 2vw 0.2vw;
                     text-align: end;
+                    font-size: 1vw;
                 }
                 .btn {
-                    @include btn;
+                    @include btn(1.5vw);
                     margin: 2vw 0.2vw;
                 }
                 .btn:hover {
-                    transform: translate(0,0);
-                    clip-path: 
+                    -webkit-transform: translate(0,0);
+                        -ms-transform: translate(0,0);
+                            transform: translate(0,0);
+                    -webkit-clip-path: 
+                        polygon(
+                        0% var(--d), 
+                        var(--d) 0%, 
+                        100% 0%, 
+                        100% calc(100% - var(--d)), 
+                        calc(100% - var(--d)) 100%, 
+                        0% 100%
+                    );
+                            clip-path: 
                         polygon(
                         0% var(--d), 
                         var(--d) 0%, 
@@ -328,10 +404,16 @@ $white-back: #d9e2f7;
             }
 
             .bloc2 {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 width: 40%;
-                justify-content: center;
-                align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
                 position: relative;
 
                 img {
@@ -350,22 +432,22 @@ $white-back: #d9e2f7;
                     z-index: 1;
                 }
                 .css {
-                    @include icone(1vw,5vw);
+                    @include icone(1vw,5vw,2.5vw);
                 }
                 .js {
-                    @include icone(-4vw,15vw);
+                    @include icone(-4vw,15vw,2.5vw);
                 }
                 .html {
-                    @include icone(5vw,32vw);
+                    @include icone(5vw,32vw,2.5vw);
                 }
                 .php {
-                    @include icone(-3vw,28vw);
+                    @include icone(-3vw,28vw,2.5vw);
                 }
                 .git {
-                    @include icone(2vw,25vw);
+                    @include icone(2vw,25vw,2.5vw);
                 }
                 .code {
-                    @include icone(7vw,9vw);
+                    @include icone(7vw,9vw,2.5vw);
                 }
             }
     }
@@ -374,10 +456,16 @@ $white-back: #d9e2f7;
 
 
         .skillsdef {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin: 0vw 3vw;
-            justify-content:space-evenly;
-            align-items: center;
+            -webkit-box-pack:space-evenly;
+                -ms-flex-pack:space-evenly;
+                    justify-content:space-evenly;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             .textskills {
                 width: 30%;
@@ -403,7 +491,10 @@ $white-back: #d9e2f7;
                     text-align: center;
                     border: none;
                     border-radius: 40px;
-                    box-shadow: 
+                    -webkit-box-shadow: 
+                        -5px 5px 6px 0 rgba(10, 15, 31, 0.973),
+                        5px -5px 6px 0 rgba(25, 57, 126, 0.425);
+                            box-shadow: 
                         -5px 5px 6px 0 rgba(10, 15, 31, 0.973),
                         5px -5px 6px 0 rgba(25, 57, 126, 0.425);
                     font-size: 1.3vw;
@@ -415,7 +506,9 @@ $white-back: #d9e2f7;
                 }
 
                 .activeButton {
-                    box-shadow: inset -3px 3px 5px 0 rgba(10, 15, 31, 0.973),
+                    -webkit-box-shadow: inset -3px 3px 5px 0 rgba(10, 15, 31, 0.973),
+                                inset 4px -4px 3px 0 rgba(25, 57, 126, 0.425);
+                            box-shadow: inset -3px 3px 5px 0 rgba(10, 15, 31, 0.973),
                                 inset 4px -4px 3px 0 rgba(25, 57, 126, 0.425);
                     font-size: 1.25vw;
                     padding: 1.05vw 1.05vw;
@@ -426,7 +519,11 @@ $white-back: #d9e2f7;
                 img {
                     width: 40vw;
                     height: auto;
-                    transition: transform 0.4s ease-out;;
+                    -webkit-transition: -webkit-transform 0.4s ease-out;
+                    transition: -webkit-transform 0.4s ease-out;
+                    -o-transition: transform 0.4s ease-out;
+                    transition: transform 0.4s ease-out;
+                    transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;;
                 }
                 img:hover {
                     @include transform(1.1);
@@ -441,6 +538,8 @@ $white-back: #d9e2f7;
             height: 15vw;
             position: relative;
             margin-right: 1.5vw;
+            -webkit-transition: opacity 0.5s;
+            -o-transition: opacity 0.5s;
             transition: opacity 0.5s;
 
             .circle1 {
@@ -464,7 +563,7 @@ $white-back: #d9e2f7;
                 @include language(13vw,83.75vw);
             }
             .circle6 {
-                @include whiteCircle (50%,30%,130deg,filli);
+                @include whiteCircle (50%,30%,110deg,filli);
                 @include language(13vw,27.5vw);
             }
             .circle7 {
@@ -522,11 +621,18 @@ $white-back: #d9e2f7;
 
         .blocsite {
 
+                display: -ms-grid;
+
                 display: grid;
 
             .projet1 {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 justify-self: flex-end;
                 width: 40%;
                 margin-right: 4vw;
@@ -536,11 +642,18 @@ $white-back: #d9e2f7;
             }
 
             .projet2 {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 justify-self: flex-start;
                 text-align: end;
-                align-items: flex-end;
+                -webkit-box-align: end;
+                    -ms-flex-align: end;
+                        align-items: flex-end;
                 width: 40%;
                 margin-left: 4vw;
                 
@@ -559,7 +672,10 @@ $white-back: #d9e2f7;
         background-image: url("../assets/images/testb.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: 
+        -webkit-box-shadow: 
+                -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
+                8px -8px 12px 0 rgba(25, 57, 126, 0.425);
+                box-shadow: 
                 -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
                 8px -8px 12px 0 rgba(25, 57, 126, 0.425);
 
@@ -571,15 +687,26 @@ $white-back: #d9e2f7;
         }
 
         .aboutbloc {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin: 2vw 4vw;
 
             .menu {
                 width: 35%;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-evenly;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: space-evenly;
+                    -ms-flex-pack: space-evenly;
+                        justify-content: space-evenly;
                 background-color: #36445a;
                 margin: 0 2vw;
                 padding-bottom: 2vw;
@@ -595,7 +722,9 @@ $white-back: #d9e2f7;
                 }
 
                 .activeButton {
-                    box-shadow: inset 3px 3px 5px 0 rgba(11, 16, 34, 0.678),
+                    -webkit-box-shadow: inset 3px 3px 5px 0 rgba(11, 16, 34, 0.678),
+                                inset -4px -4px 3px 0 rgba(226, 228, 231, 0.527);
+                            box-shadow: inset 3px 3px 5px 0 rgba(11, 16, 34, 0.678),
                                 inset -4px -4px 3px 0 rgba(226, 228, 231, 0.527);
                     font-size: 1.15vw;
                     padding: 0.55vw 0.55vw;
@@ -610,10 +739,15 @@ $white-back: #d9e2f7;
                     background-color: $white-back;
                     text-align: center;
                     border: none;
-                    justify-content: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
                     border-radius: 15px;
                     cursor: pointer;
-                    box-shadow: 
+                    -webkit-box-shadow: 
+                    -4px 4px 6px 0 rgba(10, 15, 31, 0.973),
+                    4px -4px 4px 0 rgba(146, 184, 247, 0.432);
+                            box-shadow: 
                     -4px 4px 6px 0 rgba(10, 15, 31, 0.973),
                     4px -4px 4px 0 rgba(146, 184, 247, 0.432);
                 }
@@ -627,7 +761,10 @@ $white-back: #d9e2f7;
                 display: none;
                 width: 50%;
                 height: 30vw;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                
                 margin: 0 4vw;
                 padding: 2vw;
@@ -666,8 +803,12 @@ $white-back: #d9e2f7;
        
         .backto {
             display: none;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 1vw 0;
             margin: 4vw;
             text-decoration: none;
@@ -687,10 +828,19 @@ $white-back: #d9e2f7;
         
         .blocContact {
             width: 60%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 8vw;
@@ -699,8 +849,13 @@ $white-back: #d9e2f7;
             background-image: url("../assets/images/testb.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            -webkit-transition: opacity 0.5s;
+            -o-transition: opacity 0.5s;
             transition: opacity 0.5s;
-            box-shadow: 
+            -webkit-box-shadow: 
+                -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
+                8px -8px 12px 0 rgba(32, 73, 160, 0.425);
+                    box-shadow: 
                 -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
                 8px -8px 12px 0 rgba(32, 73, 160, 0.425);
 
@@ -720,11 +875,22 @@ $white-back: #d9e2f7;
             }
 
             .btn {
-                @include btn;
+                @include btn(1.5vw);
             }
             .btn:hover {
-                transform: translate(0,0);
-                clip-path: 
+                -webkit-transform: translate(0,0);
+                    -ms-transform: translate(0,0);
+                        transform: translate(0,0);
+                -webkit-clip-path: 
+                    polygon(
+                    0% var(--d), 
+                    var(--d) 0%, 
+                    100% 0%, 
+                    100% calc(100% - var(--d)), 
+                    calc(100% - var(--d)) 100%, 
+                    0% 100%
+                );
+                        clip-path: 
                     polygon(
                     0% var(--d), 
                     var(--d) 0%, 
@@ -740,33 +906,52 @@ $white-back: #d9e2f7;
         .formbloc {
 
             display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             width: 50%;
             height: 64vw;
             margin: 4vw auto;
             background-color: $nav-color;
             border-radius: 40px;
             position: relative;
+            -webkit-transition: opacity 0.5s;
+            -o-transition: opacity 0.5s;
             transition: opacity 0.5s;
             background-image: url("../assets/images/form-back.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            box-shadow: 
+            -webkit-box-shadow: 
+                -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
+                8px -8px 12px 0 rgba(32, 73, 160, 0.425);
+                    box-shadow: 
                 -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
                 8px -8px 12px 0 rgba(32, 73, 160, 0.425);
 
             .coor {
 
                 width: 30%;
-                align-self: flex-start;
+                -ms-flex-item-align: start;
+                    align-self: flex-start;
                 margin-top: 10vw;
                 margin-left: 4vw;
                 div {
 
+                    display: -webkit-box;
+
+                    display: -ms-flexbox;
+
                     display: flex;
-                    align-items: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
 
                     i {
                         font-size: 1.6vw;
@@ -794,6 +979,8 @@ $white-back: #d9e2f7;
                 ul {
                     list-style: none;
                     padding: 2vw 0;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
 
                     li {
@@ -804,6 +991,8 @@ $white-back: #d9e2f7;
                             font-family: $title-font;
                             text-decoration: none;
                             font-size: 1.7vw;
+                            -webkit-transition: color 0.5s;
+                            -o-transition: color 0.5s;
                             transition: color 0.5s;
                         }
                         a:hover {
@@ -814,10 +1003,19 @@ $white-back: #d9e2f7;
             }
 
             .errorContact, .success  {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
 
                 p {
                     font-family: $text-font;
@@ -830,10 +1028,17 @@ $white-back: #d9e2f7;
             }
                       
             form {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 width: 70%;
-                align-items: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
 
                 i {
                     position: absolute;
@@ -875,12 +1080,23 @@ $white-back: #d9e2f7;
                 }
     
                 .btn {
-                    @include btn;
+                    @include btn(1.5vw);
                     margin-bottom: 3vw;
                 }
                 .btn:hover {
-                    transform: translate(0,0);
-                    clip-path: 
+                    -webkit-transform: translate(0,0);
+                        -ms-transform: translate(0,0);
+                            transform: translate(0,0);
+                    -webkit-clip-path: 
+                        polygon(
+                        0% var(--d), 
+                        var(--d) 0%, 
+                        100% 0%, 
+                        100% calc(100% - var(--d)), 
+                        calc(100% - var(--d)) 100%, 
+                        0% 100%
+                    );
+                            clip-path: 
                         polygon(
                         0% var(--d), 
                         var(--d) 0%, 
@@ -893,8 +1109,12 @@ $white-back: #d9e2f7;
     
                 div {
                     width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    justify-content: space-evenly;
+                    -webkit-box-pack: space-evenly;
+                        -ms-flex-pack: space-evenly;
+                            justify-content: space-evenly;
     
                     .inputS {
                         width: 43%;
@@ -921,14 +1141,22 @@ $white-back: #d9e2f7;
         padding: 20px 0;
         
         .footer-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             .footer-menu {
                 ul {
                     list-style: none;
                     padding: 2vw;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
 
                     li {
@@ -952,6 +1180,8 @@ $white-back: #d9e2f7;
                 ul {
                     list-style: none;
                     padding: 2vw;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
 
                     li {
@@ -960,6 +1190,8 @@ $white-back: #d9e2f7;
                         a {
                             color: #fff;
                             font-size: 1.75vw;
+                            -webkit-transition: color 0.5s;
+                            -o-transition: color 0.5s;
                             transition: color 0.5s;
 
                         }
@@ -972,4 +1204,137 @@ $white-back: #d9e2f7;
             }
         }
     }
+}
+
+@media (max-width: 400px) {
+    .high {
+
+        .header_desktop {
+            display: none;
+        }
+
+        .header_mobile {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            img {
+                width: 20vw;
+                margin-left: 5vw;
+            }
+
+            i {
+                font-size: 12vw;
+                color: $text-color;
+                margin-right: 10vw;
+
+            }
+
+            .active-menu  {
+                right: 0vw !important;
+            }
+
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -60vw;
+                z-index: 100;
+                padding: 8vw;
+                transition: right 0.5s ease-in-out;
+                border-radius: 0 0 0 5px;
+                background-color: $nav-color;
+
+                .close {
+                    position: absolute;
+                    top: 0;
+                    right: 42vw;
+                    background-color: $nav-color;
+                    font-size: 9vw;
+                }
+
+                ul {
+
+                    li {
+                        list-style: none;
+                        padding: 4vw;
+                        margin-right: 3vw;
+
+                        a {
+                            text-decoration: none;
+                            font-family: $text-font;
+                            font-size: 8vw;
+                            color: $text-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .head {
+
+            flex-direction: column-reverse;
+
+            .bloc2 {
+                margin: 10vw auto;
+
+                img {
+                    width: 50vw;
+                }
+                .circle {
+                    top: 65vw;
+                    left: -17vw;
+                    width: 25vw;
+                    height: 25vw;
+                    
+                }
+
+                .css {
+                    @include icone(1vw,-15vw,7vw);
+                }
+                .js {
+                    @include icone(-10vw,5vw,7vw);
+                }
+                .html {
+                    @include icone(5vw,50vw,7vw);
+                }
+                .php {
+                    @include icone(-9vw,28vw,7vw);
+                }
+                .git {
+                    @include icone(2vw,30vw,7vw);
+                }
+                .code {
+                    @include icone(7vw,1vw,7vw);
+                }
+            }
+
+            .bloc1 {
+                margin: 5vw auto;
+                align-items: center;
+                width: 90%;
+                padding: 1vw;
+
+                h2 {
+                    font-size: 10vw;              
+                    margin: 2vw 0.2vw;
+                    padding-left: 0em;
+                    text-align: center;
+                }
+                p {
+                    margin: 2vw 0.2vw;
+                    text-align: center;
+                    font-size: 6vw;
+                }
+                .btn {
+                    @include btn(8vw);
+                }
+            }
+        }
+
+
+
+    }
+    
 }

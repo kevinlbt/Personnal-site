@@ -9,7 +9,10 @@
   background-repeat: repeat;
   background-size: contains;
 }
-.high nav {
+.high .header_mobile {
+  display: none;
+}
+.high .header_desktop {
   background-color: #222a3f;
   display: flex;
   align-items: center;
@@ -19,33 +22,33 @@
   border-bottom: 1px solid black;
   /* Style du logo */
 }
-.high nav img {
+.high .header_desktop img {
   width: 10vw;
   height: auto;
   padding: 1vw 2vw;
 }
-.high nav ul {
+.high .header_desktop ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
-.high nav ul li {
+.high .header_desktop ul li {
   margin: 0.2em 0.2em;
   padding-left: 2em;
   padding-right: 2em;
   font-family: "Iceberg", cursive;
   font-size: 1.5vw;
 }
-.high nav ul li a {
+.high .header_desktop ul li a {
   color: white;
   text-decoration: none;
 }
-.high nav ul li a:hover {
+.high .header_desktop ul li a:hover {
   padding-bottom: 3vw;
   border-bottom: 0.3vw solid #cc5216;
 }
-.high nav .btn {
+.high .header_desktop .btn {
   background-color: #cc5216;
   color: #fff;
   padding: 10px 20px;
@@ -54,7 +57,6 @@
   text-decoration: none;
   font-size: 1.5vw;
   font-family: "Iceberg", cursive;
-  transition: transform 0.4s ease-out;
   border: none;
   cursor: pointer;
   --c: #cc5216; /* the color */
@@ -67,13 +69,13 @@
   background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
   transform: translate(calc(var(--d) / -1), var(--d));
   -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
-          clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
   transition: 0.5s;
 }
-.high nav .btn:hover {
+.high .header_desktop .btn:hover {
   transform: translate(0, 0);
   -webkit-clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
-          clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
+  clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
 }
 .high .head {
   display: flex;
@@ -103,6 +105,7 @@
   color: white;
   margin: 2vw 0.2vw;
   text-align: end;
+  font-size: 1vw;
 }
 .high .head .bloc1 .btn {
   background-color: #cc5216;
@@ -113,7 +116,6 @@
   text-decoration: none;
   font-size: 1.5vw;
   font-family: "Iceberg", cursive;
-  transition: transform 0.4s ease-out;
   border: none;
   cursor: pointer;
   --c: #cc5216; /* the color */
@@ -126,14 +128,14 @@
   background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
   transform: translate(calc(var(--d) / -1), var(--d));
   -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
-          clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
   transition: 0.5s;
   margin: 2vw 0.2vw;
 }
 .high .head .bloc1 .btn:hover {
   transform: translate(0, 0);
   -webkit-clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
-          clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
+  clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
 }
 .high .head .bloc2 {
   display: flex;
@@ -604,7 +606,7 @@
   z-index: 1;
 }
 .high .skills .circleskills .circle6 .big .circlebis .layer-1 {
-  transform: rotate(130deg);
+  transform: rotate(110deg);
   animation: filli ease-in-out 3s;
 }
 .high .skills .circleskills .circle6 .big .circlebis .item {
@@ -621,7 +623,7 @@
   border-radius: 50%;
   clip: rect(0, 4.26vw, 8.5vw, 0);
   background-color: white;
-  transform: rotate(130deg);
+  transform: rotate(110deg);
   animation: filli ease-in-out 3s;
 }
 @keyframes filli {
@@ -629,7 +631,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(130deg);
+    transform: rotate(110deg);
   }
 }
 .high .skills .circleskills .circle6 .white {
@@ -1078,7 +1080,6 @@
   text-decoration: none;
   font-size: 1.5vw;
   font-family: "Iceberg", cursive;
-  transition: transform 0.4s ease-out;
   border: none;
   cursor: pointer;
   --c: #cc5216; /* the color */
@@ -1091,13 +1092,13 @@
   background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
   transform: translate(calc(var(--d) / -1), var(--d));
   -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
-          clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
   transition: 0.5s;
 }
 .high .contact .blocContact .btn:hover {
   transform: translate(0, 0);
   -webkit-clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
-          clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
+  clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
 }
 .high .contact .formbloc {
   display: none;
@@ -1229,7 +1230,6 @@
   text-decoration: none;
   font-size: 1.5vw;
   font-family: "Iceberg", cursive;
-  transition: transform 0.4s ease-out;
   border: none;
   cursor: pointer;
   --c: #cc5216; /* the color */
@@ -1242,14 +1242,14 @@
   background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
   transform: translate(calc(var(--d) / -1), var(--d));
   -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
-          clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
   transition: 0.5s;
   margin-bottom: 3vw;
 }
 .high .contact .formbloc form .btn:hover {
   transform: translate(0, 0);
   -webkit-clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
-          clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
+  clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
 }
 .high .contact .formbloc form div {
   width: 100%;
@@ -1310,4 +1310,172 @@
 }
 .high footer .footer-container .footer-social ul li a:hover {
   color: #cc5216;
+}
+
+@media (max-width: 400px) {
+  .high .header_desktop {
+    display: none;
+  }
+  .high .header_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .high .header_mobile img {
+    width: 20vw;
+    margin-left: 5vw;
+  }
+  .high .header_mobile i {
+    font-size: 12vw;
+    color: white;
+    margin-right: 10vw;
+  }
+  .high .header_mobile .active-menu {
+    right: 0vw !important;
+  }
+  .high .header_mobile .menu {
+    position: fixed;
+    top: 0;
+    right: -60vw;
+    z-index: 100;
+    padding: 8vw;
+    transition: right 0.5s ease-in-out;
+    border-radius: 0 0 0 5px;
+    background-color: #222a3f;
+  }
+  .high .header_mobile .menu .close {
+    position: absolute;
+    top: 0;
+    right: 42vw;
+    background-color: #222a3f;
+    font-size: 9vw;
+  }
+  .high .header_mobile .menu ul li {
+    list-style: none;
+    padding: 4vw;
+    margin-right: 3vw;
+  }
+  .high .header_mobile .menu ul li a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: 8vw;
+    color: white;
+  }
+  .high .head {
+    flex-direction: column-reverse;
+  }
+  .high .head .bloc2 {
+    margin: 10vw auto;
+  }
+  .high .head .bloc2 img {
+    width: 50vw;
+  }
+  .high .head .bloc2 .circle {
+    top: 65vw;
+    left: -17vw;
+    width: 25vw;
+    height: 25vw;
+  }
+  .high .head .bloc2 .css {
+    position: absolute;
+    top: 1vw;
+    left: -15vw;
+    font-size: 7vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: #d9e2f7;
+  }
+  .high .head .bloc2 .js {
+    position: absolute;
+    top: -10vw;
+    left: 5vw;
+    font-size: 7vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: #d9e2f7;
+  }
+  .high .head .bloc2 .html {
+    position: absolute;
+    top: 5vw;
+    left: 50vw;
+    font-size: 7vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: #d9e2f7;
+  }
+  .high .head .bloc2 .php {
+    position: absolute;
+    top: -9vw;
+    left: 28vw;
+    font-size: 7vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: #d9e2f7;
+  }
+  .high .head .bloc2 .git {
+    position: absolute;
+    top: 2vw;
+    left: 30vw;
+    font-size: 7vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: #d9e2f7;
+  }
+  .high .head .bloc2 .code {
+    position: absolute;
+    top: 7vw;
+    left: 1vw;
+    font-size: 7vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: #d9e2f7;
+  }
+  .high .head .bloc1 {
+    margin: 5vw auto;
+    align-items: center;
+    width: 90%;
+    padding: 1vw;
+  }
+  .high .head .bloc1 h2 {
+    font-size: 10vw;
+    margin: 2vw 0.2vw;
+    padding-left: 0em;
+    text-align: center;
+  }
+  .high .head .bloc1 p {
+    margin: 2vw 0.2vw;
+    text-align: center;
+    font-size: 6vw;
+  }
+  .high .head .bloc1 .btn {
+    background-color: #cc5216;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 0.5vw;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 8vw;
+    font-family: "Iceberg", cursive;
+    border: none;
+    cursor: pointer;
+    --c: #cc5216; /* the color */
+    --b: .15vw; /* border length*/
+    --d: 0.6vw; /* the cube depth */
+    --_s: calc(var(--d) + var(--b));
+    color: var(--c);
+    border: solid rgba(0, 0, 0, 0);
+    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+    transform: translate(calc(var(--d) / -1), var(--d));
+    -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+    clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+    transition: 0.5s;
+  }
 }/*# sourceMappingURL=style.css.map */

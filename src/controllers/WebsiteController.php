@@ -18,15 +18,26 @@ class WebsiteController extends AbstractController {
         
     }
     
+    public static function getErrors () {
+        
+        return self::$errors;
+    }
+
+    public static function getSuccess () {
+        
+        return self::$success;
+    }
     //home page
     public static function home () {
 
         self::$errors = [];
-        $success = null;
+        self::$success = null;
 
         if (Errors::checkErrorContact()) {
         
             self::$errors = Errors::checkErrorContact();
+            self::render('contact');
+            die();
         }
         
         else {
@@ -52,7 +63,7 @@ class WebsiteController extends AbstractController {
                         $mail->Host = 'smtp.gmail.com';  
                         $mail->SMTPAuth = true;                               
                         $mail->Username = 'kevin.lebot@gmail.com';                 
-                        $mail->Password = 'mevggymukfgtgjuc';                          
+                        $mail->Password = 'oiscblvzembworiv';                          
                         $mail->SMTPSecure = 'tls';                            
                         $mail->Port = 587;                                    
             
@@ -68,23 +79,26 @@ class WebsiteController extends AbstractController {
                         $mail->SMTPDebug = 0; 
             
                         if ($mail->send()) {
-                            $success = "Mail envoyé ! Merci pour votre interêt";
+                            self::$success = "Mail envoyé ! Merci pour votre interêt";
+                            header ("Refresh: 5; URL = /my-site/ ");
                         } else {
-                            $success = "Echec dans l'envoi du mail";
+                            self::$success = "Echec dans l'envoi du mail";
                         }
                         
                     }
                     
                     catch (Exception $e) {
-                        $erreur = $e;
+                        self::$success = "Echec dans l'envoi du mail";
                     }
                         
+                    self::render('contact');
+                    die();
                 }
         
             }
         }
-
         self::render('home');
+
     }
     
 

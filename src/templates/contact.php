@@ -1,14 +1,20 @@
 <section class="contact" id="contact">
 
-    <h3>Contacter - moi</h3>
+    <h3 <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: none"';}?>>Contacter - moi</h3>
 
-    <div class="blocContact" id="blocContact">
+    <a class="backto" href="http://localhost:8080/my-site/" <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: flex"';}?>>
+        <i class="fa-solid fa-arrow-left"></i>
+        <p> Revenir au site </p>
+    </a>
+    
+
+    <div class="blocContact" id="blocContact" <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: none"';}?>>
         <h4>Une question ? un projet ?</h4>
         <p>Contact - moi pour pouvoir discuter de votre projet et voir ce qu'il est possible de faire.</p>
         <a class="btn" id="contactBtn">Clique ici</a>
     </div>
 
-    <div class="formbloc" id="form">
+    <div class="formbloc" id="form" <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: flex"';}?>>
         <div class="coor">
             <div>
                 <i class="fa-regular fa-envelope"></i>
@@ -21,6 +27,15 @@
                 <li><a href="https://github.com/kevinlbt"><i class="fa-brands fa-github"></i></a></li>
                 <li><a href="https://www.instagram.com/kevin_lbt/"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
+        </div>
+
+        <div class="errorContact">
+            <?php foreach(WebsiteController::getErrors() as $error) : ?>
+              <p id="" ><?php  echo $error; ?></p>
+            <?php endforeach; ?>
+        </div>
+        <div class="success">
+            <p class="green"><?php echo WebsiteController::getSuccess() ?></p>
         </div>
         <form method="POST">
             <i class="fa-solid fa-circle-xmark" id="cross"></i>

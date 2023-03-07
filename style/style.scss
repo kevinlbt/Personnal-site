@@ -663,7 +663,28 @@ $white-back: #d9e2f7;
             padding: 1vw 0;
             margin: 4vw 4vw 4vw 14vw;
         }
+       
+        .backto {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 1vw 0;
+            margin: 4vw;
+            text-decoration: none;
 
+            i {
+                font-size: 3vw;
+                color: $text-color;
+                margin-right: 1vw;
+            }
+            p {
+                font-family: $title-font;
+                font-size: 2vw;
+                color: $text-color;
+            }
+        }
+            
+        
         .blocContact {
             width: 60%;
             display: flex;
@@ -724,7 +745,7 @@ $white-back: #d9e2f7;
             justify-content: space-between;
             width: 50%;
             height: 64vw;
-            margin: 0vw auto;
+            margin: 4vw auto;
             background-color: $nav-color;
             border-radius: 40px;
             position: relative;
@@ -792,6 +813,22 @@ $white-back: #d9e2f7;
                 }
             }
 
+            .errorContact, .success  {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-family: $text-font;
+                    font-size: 1.1vw;
+                    color: firebrick;
+                }
+                .green {
+                    color: forestgreen;
+                }
+            }
+                      
             form {
                 display: flex;
                 flex-direction: column;

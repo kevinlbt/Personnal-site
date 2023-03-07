@@ -20,11 +20,12 @@
 
 <body class="high">
 
-    <?php require './src/templates/header.php'; ?>
+    <?php require './src/templates/nav.php'; ?>
+    <?php if (isset($templates) && $templates === "home") {require './src/templates/header.php';} ?>
     <?php if (isset($templates) && $templates === "home") {require './src/templates/skills.php';} ?>
     <?php if (isset($templates) && $templates === "home") {require './src/templates/portfolio.php';} ?>
     <?php if (isset($templates) && $templates === "home") {require './src/templates/about.php';} ?>
-    <?php if (isset($templates) && $templates === "home") {require './src/templates/contact.php';} ?>
+    <?php if (isset($templates) && $templates === "home" || $templates === "contact") {require './src/templates/contact.php';} ?>
     <?php require './src/templates/footer.php'; ?>
     
 

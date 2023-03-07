@@ -1,0 +1,938 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+$back-color: #1b2133;
+$nav-color: #222a3f;
+$btn-color: #cc5216;
+$title-font: 'Iceberg', cursive;
+$text-font: 'Lato', sans-serif;
+$text-color: white;
+$white-back: #d9e2f7;
+
+
+@mixin btn {
+    background-color: $btn-color;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 0.5vw;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: $title-font;
+    transition: transform 0.4s ease-out;
+    border: none;
+    cursor: pointer;
+    --c: #cc5216; /* the color */
+    --b: .15vw;    /* border length*/
+    --d: 0.6vw;    /* the cube depth */
+    
+    --_s: calc(var(--d) + var(--b));
+    
+    color: var(--c);
+    border: solid #0000;
+    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    background:
+        conic-gradient(at left var(--d)  bottom var(--d),
+        #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+        conic-gradient(at left var(--_s) bottom var(--_s),
+        #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+    transform: translate(calc(var(--d)/-1),var(--d));
+    clip-path: 
+        polygon(
+        var(--d) 0%, 
+        var(--d) 0%, 
+        100% 0%, 
+        100% calc(100% - var(--d)),
+        100% calc(100% - var(--d)),
+        var(--d) calc(100% - var(--d))
+        );
+    transition: 0.5s;
+
+}
+
+@mixin transform ($x) {
+    -webkit-transform: scale($x);
+            -ms-transform: scale($x);
+                transform: scale($x);
+}
+
+@mixin icone ($x,$y) {
+    position: absolute;
+    top: $x;
+    left: $y;
+    font-size: 2.5vw;
+    z-index: 7;
+    border: none;
+    border-radius: 2px;
+    color: $white-back;
+}
+
+@mixin keyframes($name,$deg) {
+    @keyframes #{$name}{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate($deg);
+        }
+    }
+}
+
+@mixin whiteCircle ($x,$y,$deg,$name) {
+    .circle {
+        border-radius: 50%;
+        position: absolute;
+        top: $x;
+        left: $y;
+        transform: translate(-50%, -50%);
+      }
+      
+      .big {
+        background-color: #1f304b;;
+        width: 8vw;
+        height: 8vw;
+        z-index: 1;
+
+        .circlebis {
+            .layer-1 {
+                transform: rotate($deg);
+                animation: $name ease-in-out 3s;
+            }
+            .item {
+                width: 8.11vw;
+                height: 8.11vw;
+                position: absolute;
+                border-radius: 50%;
+                clip: rect(0, 8.5vw, 8.5vw, 4.2vw);
+
+                .fill {
+                    width: 8.13vw;
+                    height: 8.13vw;
+                    position: absolute;
+                    border-radius: 50%;
+                    clip: rect(0, 4.26vw, 8.5vw, 0);
+                    background-color: white;
+                    transform: rotate($deg);
+                    animation: $name ease-in-out 3s;
+                }
+                @include keyframes($name,$deg)
+            }
+        }
+      }
+      
+      .white {
+        background-color: white;
+        width: 5.5vw;
+        height: 5.5vw;
+        z-index: 2;
+        box-shadow: 0px 0px 20px 1px #000000 inset;
+      }
+      
+      .small {
+        background-color: $back-color;
+        width: 2.5vw;
+        height: 2.5vw;
+      }
+}
+
+@mixin language ($x,$y){
+
+    p {
+        font-size: 2vw;
+        font-family: $title-font;
+        color: $text-color;
+        position: absolute;
+        top: $x;
+        left: $y;
+        padding-top: 1vw;
+    }
+}
+
+@mixin orangePoint ($content,$top,$left,$mtop) {
+
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $btn-color;
+        margin-top: $mtop;
+      
+        &:before {
+            content:$content;
+            position: absolute;
+            top: $top;
+            left: $left;
+            color: $text-color;
+            font-family: $title-font;
+            font-size: 1.5vw;
+        }
+    
+}
+
+@mixin projetpat {
+
+    h3 {
+        font-family: $title-font;
+        font-size: 3vw;
+        color: $text-color;
+        padding: 1vw 3vw;
+    }
+    p {
+        font-family: $text-font;
+        font-size: 1.2vw;
+        color: $text-color;
+        padding: 1vw 3vw;
+    }
+    span {
+        background-color: $text-color;
+        width: 20%;
+        height: 1px;
+        margin: 1vw 6vw;
+    }
+    div {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 70%;
+            height: auto;
+            margin: 1vw 3vw;
+            border-radius: 6px;
+        }
+        a {
+            color: $text-color;
+            font-size: 2.5vw;
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
+    }
+}
+
+.high {
+
+    background-color: $back-color;
+    background-repeat: repeat;
+    background-size: contains;
+    
+
+    nav {
+        background-color: $nav-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: $text-color;
+        border-bottom: 1px solid black;
+
+        /* Style du logo */
+        img {
+            width: 10vw;
+            height: auto;
+            padding: 1vw 2vw;
+
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0.2em 0.2em;
+                padding-left: 2em;
+                padding-right: 2em;
+                font-family: $title-font;
+                font-size: 1.5vw;
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    padding-bottom: 3vw;
+                    border-bottom: 0.3vw solid $btn-color;
+                }
+            }
+        }
+        .btn {
+            @include btn;
+        }
+
+        .btn:hover {
+            transform: translate(0,0);
+            clip-path: 
+                polygon(
+                0% var(--d), 
+                var(--d) 0%, 
+                100% 0%, 
+                100% calc(100% - var(--d)), 
+                calc(100% - var(--d)) 100%, 
+                0% 100%
+            );
+        }
+    }
+
+    .head {
+        
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 7vw;
+        padding-bottom: 7vw;
+
+            .bloc1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                width: 40%;
+                margin: 0.3vw;
+                padding: 2vw 0 2vw 4vw;
+
+                h2 {
+                    font-family: $title-font;
+                    font-size: 2vw;
+                    color: $text-color;
+                    margin: 2vw 0.2vw;
+                    padding-left: 4em;
+                    text-align: end;
+                }
+                p {
+                    font-family: $text-font;
+                    color: $text-color;
+                    margin: 2vw 0.2vw;
+                    text-align: end;
+                }
+                .btn {
+                    @include btn;
+                    margin: 2vw 0.2vw;
+                }
+                .btn:hover {
+                    transform: translate(0,0);
+                    clip-path: 
+                        polygon(
+                        0% var(--d), 
+                        var(--d) 0%, 
+                        100% 0%, 
+                        100% calc(100% - var(--d)), 
+                        calc(100% - var(--d)) 100%, 
+                        0% 100%
+                    );
+                }
+            }
+
+            .bloc2 {
+                display: flex;
+                width: 40%;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                img {
+                    width: 20vw;
+                    border: 0.5vw solid white;
+                    z-index: 5;
+                }
+                .circle {
+                    position: absolute;
+                    top: 25vw;
+                    left: 5.5vw;
+                    width: 10vw;
+                    height: 10vw;
+                    border-radius: 50%;
+                    border: 2px dotted white;
+                    z-index: 1;
+                }
+                .css {
+                    @include icone(1vw,5vw);
+                }
+                .js {
+                    @include icone(-4vw,15vw);
+                }
+                .html {
+                    @include icone(5vw,32vw);
+                }
+                .php {
+                    @include icone(-3vw,28vw);
+                }
+                .git {
+                    @include icone(2vw,25vw);
+                }
+                .code {
+                    @include icone(7vw,9vw);
+                }
+            }
+    }
+
+    .skills {
+
+
+        .skillsdef {
+            display: flex;
+            margin: 0vw 3vw;
+            justify-content:space-evenly;
+            align-items: center;
+
+            .textskills {
+                width: 30%;
+                color: $text-color;
+                margin-right: 2vw;
+                
+                h1 {
+                    font-family: $title-font;
+                    font-size: 3vw;
+                    margin: 2vw 0;
+                    margin-left: 2vw;
+                }
+
+                p {
+                    font-family: $text-font;
+                    font-size: 1.1vw;
+                    margin-left: 2vw;
+                }
+                button {
+                    width: 70%;
+                    margin: 1vw 2vw;
+                    padding: 1vw;
+                    text-align: center;
+                    border: none;
+                    border-radius: 40px;
+                    box-shadow: 
+                        -5px 5px 6px 0 rgba(10, 15, 31, 0.973),
+                        5px -5px 6px 0 rgba(25, 57, 126, 0.425);
+                    font-size: 1.3vw;
+                    font-family: $text-font;
+                    background-color: $back-color;
+                    color: $text-color;
+                    cursor: pointer;
+                    
+                }
+
+                .activeButton {
+                    box-shadow: inset -3px 3px 5px 0 rgba(10, 15, 31, 0.973),
+                                inset 4px -4px 3px 0 rgba(25, 57, 126, 0.425);
+                    font-size: 1.25vw;
+                    padding: 1.05vw 1.05vw;
+                }
+            }
+            .skillsimg {
+                
+                img {
+                    width: 40vw;
+                    height: auto;
+                    transition: transform 0.4s ease-out;;
+                }
+                img:hover {
+                    @include transform(1.1);
+                }
+            }
+        }
+
+        #backend {
+            display: none;
+        }
+        .circleskills {
+            height: 15vw;
+            position: relative;
+            margin-right: 1.5vw;
+            transition: opacity 0.5s;
+
+            .circle1 {
+                @include whiteCircle (50%,10%,160deg,fillan);
+                @include language(13vw,7.75vw);
+            }
+            .circle2 {
+                @include whiteCircle (50%,30%,140deg,fillen);
+                @include language(13vw,26.25vw);
+            }
+            .circle3 {
+                @include whiteCircle (50%,50%,90deg,fillou);
+                @include language(13vw,45vw);
+            }
+            .circle4 {
+                @include whiteCircle (50%,70%,40deg,fillon);
+                @include language(13vw,66vw);
+            }
+            .circle5 {
+                @include whiteCircle (50%,90%,120deg,fillin);
+                @include language(13vw,83.75vw);
+            }
+            .circle6 {
+                @include whiteCircle (50%,30%,130deg,filli);
+                @include language(13vw,27.5vw);
+            }
+            .circle7 {
+                @include whiteCircle (50%,50%,130deg,fillop);
+                @include language(13vw,47.5vw);
+            }
+            .circle8 {
+                @include whiteCircle (50%,70%,60deg,fillun);
+                @include language(13vw,65.75vw);
+            }
+        }
+    }
+
+    .portfolio {
+
+        position: relative;
+        padding-top: 5vw;
+        height: 80vw;
+
+        h2 {
+            font-family: $title-font;
+            font-size: 4vw;
+            padding: 2vw;
+            margin-left: 12vw;
+            color: $text-color;
+        }
+
+        .vertical-line {
+            position: absolute;
+            top: 11vw;
+            bottom: 3vw;
+            left: 50%;
+            width: 1px;
+            background-color: white;
+            z-index: 9999;
+        
+            ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 5vw;
+            left: -5px;
+
+                .point1 {
+                    @include orangePoint("2022",-0.5vw,-4vw,0);
+                }
+                .point2 {
+                    @include orangePoint("2022",29.5vw,2.5vw,29.25vw);
+                }
+            
+            }
+
+        }
+
+        .blocsite {
+
+                display: grid;
+
+            .projet1 {
+                display: flex;
+                flex-direction: column;
+                justify-self: flex-end;
+                width: 40%;
+                margin-right: 4vw;
+                
+                @include projetpat;
+                
+            }
+
+            .projet2 {
+                display: flex;
+                flex-direction: column;
+                justify-self: flex-start;
+                text-align: end;
+                align-items: flex-end;
+                width: 40%;
+                margin-left: 4vw;
+                
+                @include projetpat;
+                
+            }
+        } 
+    }
+
+    .about {
+
+        width: 85%;
+        padding-bottom: 4vw;
+        margin: 4vw auto;
+        border-radius: 60% 40% 77% 23% / 30% 62% 38% 70%;
+        background-image: url("../assets/images/testb.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 
+                -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
+                8px -8px 12px 0 rgba(25, 57, 126, 0.425);
+
+        h3 {
+            font-family: $title-font;
+            font-size: 2.5vw;
+            color: $white-back;
+            padding: 5vw 1vw 2vw 28vw;
+        }
+
+        .aboutbloc {
+            display: flex;
+            margin: 2vw 4vw;
+
+            .menu {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: #36445a;
+                margin: 0 2vw;
+                padding-bottom: 2vw;
+                border-radius: 73% 27% 50% 50% / 36% 41% 59% 64%;
+                
+
+                img {
+                    width: 45%;
+                    height: auto;
+                    margin-top: -2vw;
+                    padding: 0vw 0.5vw 1vw 0.5vw;
+                    border-radius: 100%;
+                }
+
+                .activeButton {
+                    box-shadow: inset 3px 3px 5px 0 rgba(11, 16, 34, 0.678),
+                                inset -4px -4px 3px 0 rgba(226, 228, 231, 0.527);
+                    font-size: 1.15vw;
+                    padding: 0.55vw 0.55vw;
+                }    
+                button {
+                    width: 50%;
+                    font-family: $title-font;
+                    font-size: 1.2vw;
+                    padding: 0.5vw;
+                    margin: 0vw 0.5vw;
+                    color: $back-color;
+                    background-color: $white-back;
+                    text-align: center;
+                    border: none;
+                    justify-content: center;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    box-shadow: 
+                    -4px 4px 6px 0 rgba(10, 15, 31, 0.973),
+                    4px -4px 4px 0 rgba(146, 184, 247, 0.432);
+                }
+            }
+
+            .active {
+                display: block !important;
+            }
+        
+            .textme {
+                display: none;
+                width: 50%;
+                height: 30vw;
+                flex-direction: column;
+               
+                margin: 0 4vw;
+                padding: 2vw;
+                
+
+                h4 {
+                    font-family: $title-font;
+                    font-size: 2.5vw;
+                    color: $white-back;
+                    padding: 0.5vw;
+                    margin-left: 3vw;
+                }
+
+                p {
+                    font-family: $text-font;
+                    font-size: 1.3vw;
+                    color: $white-back;
+                    padding: 2vw 0;
+                }
+
+            }
+        }
+    }
+
+    .contact {
+
+        margin-bottom: 5vw;
+
+        h3 {
+            font-family: $title-font;
+            font-size: 4vw;
+            color: $text-color;
+            padding: 1vw 0;
+            margin: 4vw 4vw 4vw 14vw;
+        }
+
+        .blocContact {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 8vw;
+            padding: 3vw;
+            border-radius: 40px;
+            background-image: url("../assets/images/testb.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: opacity 0.5s;
+            box-shadow: 
+                -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
+                8px -8px 12px 0 rgba(32, 73, 160, 0.425);
+
+            h4 {
+                font-family: $title-font;
+                font-size: 3vw;
+                color: $text-color;
+                padding: 1vw 0;
+            }
+
+            p {
+                font-family: $text-font;
+                font-size: 1.5vw;
+                color: $text-color;
+                padding: 4vw 5vw;
+                text-align: center;
+            }
+
+            .btn {
+                @include btn;
+            }
+            .btn:hover {
+                transform: translate(0,0);
+                clip-path: 
+                    polygon(
+                    0% var(--d), 
+                    var(--d) 0%, 
+                    100% 0%, 
+                    100% calc(100% - var(--d)), 
+                    calc(100% - var(--d)) 100%, 
+                    0% 100%
+                );
+            }
+        }
+
+
+        .formbloc {
+
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            height: 64vw;
+            margin: 0vw auto;
+            background-color: $nav-color;
+            border-radius: 40px;
+            position: relative;
+            transition: opacity 0.5s;
+            background-image: url("../assets/images/form-back.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 
+                -12px 12px 16px 0 rgba(10, 15, 31, 0.973),
+                8px -8px 12px 0 rgba(32, 73, 160, 0.425);
+
+            .coor {
+
+                width: 30%;
+                align-self: flex-start;
+                margin-top: 10vw;
+                margin-left: 4vw;
+                div {
+
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 1.6vw;
+                        color: $text-color;
+                    }
+                    span {
+                        width: 1px;
+                        height: 1.3vw;
+                        margin: 1vw;
+                        background-color: $white-back;
+                    }
+                    p {
+                        font-family: $title-font;
+                        font-size: 1.1vw;
+                        color: $text-color;
+                    }
+                }
+                
+                p {
+                    font-family: $text-font;
+                    font-size: 1.1vw;
+                    color: $text-color;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 2vw 0;
+                    display: flex;
+
+                    li {
+                    margin-right: 1.5vw;
+
+                        a {
+                            color: $text-color;
+                            font-family: $title-font;
+                            text-decoration: none;
+                            font-size: 1.7vw;
+                            transition: color 0.5s;
+                        }
+                        a:hover {
+                            color: $btn-color;
+                        }
+                    }
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                align-items: center;
+
+                i {
+                    position: absolute;
+                    top: 2vw;
+                    left: 2vw;
+                    font-size: 1.3vw;
+                    color: $btn-color;
+                    cursor: pointer;
+                }
+                label {
+                    font-family: $title-font;
+                    font-size: 1.5vw;
+                    color: $white-back;
+                    padding: 1vw;
+    
+                }
+                .inputB {
+                    width: 90%;
+                    height: 2vw;
+                    border: hidden;
+                    border-bottom: 0.1vw solid #E5E5E5 ;
+                    outline: none;
+                    margin-bottom: 0.7vw;
+                    font-size: 1vw;
+                    color: $text-color;
+                    background-color: transparent;
+                }
+    
+                .textArea {
+                    width: 90%;
+                    height: 6vw;
+                    border: hidden;
+                    border-bottom: 0.1vw solid #E5E5E5 ;
+                    outline: none;
+                    margin-bottom: 3vw;
+                    font-size: 1vw;
+                    color: $text-color;
+                    background-color: transparent;
+                }
+    
+                .btn {
+                    @include btn;
+                    margin-bottom: 3vw;
+                }
+                .btn:hover {
+                    transform: translate(0,0);
+                    clip-path: 
+                        polygon(
+                        0% var(--d), 
+                        var(--d) 0%, 
+                        100% 0%, 
+                        100% calc(100% - var(--d)), 
+                        calc(100% - var(--d)) 100%, 
+                        0% 100%
+                    );
+                }
+    
+                div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+    
+                    .inputS {
+                        width: 43%;
+                        height: 2vw;
+                        border: hidden;
+                        border-bottom: 0.1vw solid #E5E5E5 ;
+                        outline: none;
+                        margin-bottom: 0.7vw;
+                        font-size: 1vw;
+                        color: $text-color;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        
+
+    }
+
+    footer {
+        background-color: $nav-color;
+        color: #fff;
+        padding: 20px 0;
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer-menu {
+                ul {
+                    list-style: none;
+                    padding: 2vw;
+                    display: flex;
+
+                    li {
+                    margin-right: 4vw;
+
+                    a {
+                        color: $text-color;
+                        font-family: $title-font;
+                        text-decoration: none;
+                        font-size: 1.7vw;
+                    }
+                    a:hover {
+                        padding-top: 2.7vw;
+                        border-top: 0.3vw solid $btn-color;
+                    }
+                    }
+                }
+            }
+
+            .footer-social {
+                ul {
+                    list-style: none;
+                    padding: 2vw;
+                    display: flex;
+
+                    li {
+                    margin-right: 2.5vw;
+
+                        a {
+                            color: #fff;
+                            font-size: 1.75vw;
+                            transition: color 0.5s;
+
+                        }
+
+                        a:hover {
+                            color: $btn-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

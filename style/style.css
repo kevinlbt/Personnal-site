@@ -306,7 +306,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(160deg);
   animation: fillan ease-in-out 3s;
@@ -321,8 +321,8 @@
 }
 .high .skills .circleskills .circle1 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -369,7 +369,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(140deg);
   animation: fillen ease-in-out 3s;
@@ -384,8 +384,8 @@
 }
 .high .skills .circleskills .circle2 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -432,7 +432,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(90deg);
   animation: fillou ease-in-out 3s;
@@ -447,8 +447,8 @@
 }
 .high .skills .circleskills .circle3 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -495,7 +495,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(40deg);
   animation: fillon ease-in-out 3s;
@@ -510,8 +510,8 @@
 }
 .high .skills .circleskills .circle4 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -558,7 +558,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(120deg);
   animation: fillin ease-in-out 3s;
@@ -573,8 +573,8 @@
 }
 .high .skills .circleskills .circle5 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -621,7 +621,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(110deg);
   animation: filli ease-in-out 3s;
@@ -636,8 +636,8 @@
 }
 .high .skills .circleskills .circle6 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -684,7 +684,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(130deg);
   animation: fillop ease-in-out 3s;
@@ -699,8 +699,8 @@
 }
 .high .skills .circleskills .circle7 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -747,7 +747,7 @@
   height: 8.13vw;
   position: absolute;
   border-radius: 50%;
-  clip: rect(0, 4.26vw, 8.5vw, 0);
+  clip: rect(0, 4.25vw, 8.5vw, 0);
   background-color: white;
   transform: rotate(60deg);
   animation: fillun ease-in-out 3s;
@@ -762,8 +762,8 @@
 }
 .high .skills .circleskills .circle8 .white {
   background-color: white;
-  width: 5.5vw;
-  height: 5.5vw;
+  width: 5.5172413793vw;
+  height: 5.5172413793vw;
   z-index: 2;
   box-shadow: 0px 0px 20px 1px #000000 inset;
 }
@@ -1341,7 +1341,7 @@
     z-index: 100;
     padding: 8vw;
     transition: right 0.5s ease-in-out;
-    border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 10px;
     background-color: #222a3f;
   }
   .high .header_mobile .menu .close {
@@ -1450,7 +1450,7 @@
     text-align: center;
   }
   .high .head .bloc1 p {
-    margin: 2vw 0.2vw;
+    margin: 4vw 0.2vw;
     text-align: center;
     font-size: 6vw;
   }
@@ -1477,5 +1477,538 @@
     -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
     clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
     transition: 0.5s;
+  }
+  .high .skills .skillsdef .skillsimg {
+    display: none;
+  }
+  .high .skills .skillsdef .textskills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-right: 0;
+  }
+  .high .skills .skillsdef .textskills h1 {
+    font-size: 10vw;
+    margin: 3vw auto;
+    text-align: center;
+  }
+  .high .skills .skillsdef .textskills p {
+    font-size: 7vw;
+    margin: 3vw auto;
+    text-align: center;
+  }
+  .high .skills .skillsdef .textskills button, .high .skills .skillsdef .textskills .activeButton {
+    width: 80%;
+    margin: 5vw auto;
+    font-size: 8vw;
+    padding: 3vw 2vw;
+  }
+  .high .skills .circleskills {
+    height: 55vw;
+  }
+  .high .skills .circleskills .circle1 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle1 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle1 .big .circlebis .layer-1 {
+    transform: rotate(160deg);
+    animation: fillan ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle1 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle1 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(160deg);
+    animation: fillan ease-in-out 3s;
+  }
+  @keyframes fillan {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(160deg);
+    }
+  }
+  .high .skills .circleskills .circle1 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle1 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle1 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 26vw;
+    left: 15vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle2 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle2 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle2 .big .circlebis .layer-1 {
+    transform: rotate(140deg);
+    animation: fillen ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle2 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle2 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(140deg);
+    animation: fillen ease-in-out 3s;
+  }
+  @keyframes fillen {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(140deg);
+    }
+  }
+  .high .skills .circleskills .circle2 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle2 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle2 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 26vw;
+    left: 41vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle3 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle3 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle3 .big .circlebis .layer-1 {
+    transform: rotate(90deg);
+    animation: fillou ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle3 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle3 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(90deg);
+    animation: fillou ease-in-out 3s;
+  }
+  @keyframes fillou {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+  .high .skills .circleskills .circle3 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle3 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle3 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 26vw;
+    left: 69vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle4 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle4 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle4 .big .circlebis .layer-1 {
+    transform: rotate(40deg);
+    animation: fillon ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle4 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle4 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(40deg);
+    animation: fillon ease-in-out 3s;
+  }
+  @keyframes fillon {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(40deg);
+    }
+  }
+  .high .skills .circleskills .circle4 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle4 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle4 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 55vw;
+    left: 27vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle5 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle5 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle5 .big .circlebis .layer-1 {
+    transform: rotate(120deg);
+    animation: fillin ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle5 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle5 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(120deg);
+    animation: fillin ease-in-out 3s;
+  }
+  @keyframes fillin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(120deg);
+    }
+  }
+  .high .skills .circleskills .circle5 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle5 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle5 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 55vw;
+    left: 53vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle6 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle6 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle6 .big .circlebis .layer-1 {
+    transform: rotate(110deg);
+    animation: filli ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle6 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle6 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(110deg);
+    animation: filli ease-in-out 3s;
+  }
+  @keyframes filli {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(110deg);
+    }
+  }
+  .high .skills .circleskills .circle6 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle6 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle6 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 26vw;
+    left: 25vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle7 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle7 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle7 .big .circlebis .layer-1 {
+    transform: rotate(130deg);
+    animation: fillop ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle7 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle7 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(130deg);
+    animation: fillop ease-in-out 3s;
+  }
+  @keyframes fillop {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(130deg);
+    }
+  }
+  .high .skills .circleskills .circle7 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle7 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle7 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 26vw;
+    left: 65vw;
+    padding-top: 1vw;
+  }
+  .high .skills .circleskills .circle8 .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .high .skills .circleskills .circle8 .big {
+    background-color: #1f304b;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+  }
+  .high .skills .circleskills .circle8 .big .circlebis .layer-1 {
+    transform: rotate(60deg);
+    animation: fillun ease-in-out 3s;
+  }
+  .high .skills .circleskills .circle8 .big .circlebis .item {
+    width: 20.11vw;
+    height: 20.11vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 20.5vw, 20.5vw, 10.2vw);
+  }
+  .high .skills .circleskills .circle8 .big .circlebis .item .fill {
+    width: 20.13vw;
+    height: 20.13vw;
+    position: absolute;
+    border-radius: 50%;
+    clip: rect(0, 10.25vw, 20.5vw, 0);
+    background-color: white;
+    transform: rotate(60deg);
+    animation: fillun ease-in-out 3s;
+  }
+  @keyframes fillun {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(60deg);
+    }
+  }
+  .high .skills .circleskills .circle8 .white {
+    background-color: white;
+    width: 13.7931034483vw;
+    height: 13.7931034483vw;
+    z-index: 2;
+    box-shadow: 0px 0px 20px 1px #000000 inset;
+  }
+  .high .skills .circleskills .circle8 .small {
+    background-color: #1b2133;
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+  .high .skills .circleskills .circle8 p {
+    font-size: 5vw;
+    font-family: "Iceberg", cursive;
+    color: white;
+    position: absolute;
+    top: 55vw;
+    left: 43vw;
+    padding-top: 1vw;
   }
 }/*# sourceMappingURL=style.css.map */

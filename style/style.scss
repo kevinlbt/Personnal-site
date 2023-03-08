@@ -95,7 +95,7 @@ $white-back: #d9e2f7;
     }
 }
 
-@mixin whiteCircle ($x,$y,$deg,$name) {
+@mixin whiteCircle ($size,$x,$y,$deg,$name) {
     .circle {
         border-radius: 50%;
         position: absolute;
@@ -108,8 +108,8 @@ $white-back: #d9e2f7;
       
       .big {
         background-color: #1f304b;;
-        width: 8vw;
-        height: 8vw;
+        width: $size;
+        height: $size;
         z-index: 1;
 
         .circlebis {
@@ -121,18 +121,18 @@ $white-back: #d9e2f7;
                         animation: $name ease-in-out 3s;
             }
             .item {
-                width: 8.11vw;
-                height: 8.11vw;
+                width: calc($size + 0.11vw);
+                height: calc($size + 0.11vw);
                 position: absolute;
                 border-radius: 50%;
-                clip: rect(0, 8.5vw, 8.5vw, 4.2vw);
+                clip: rect(0, calc($size + 0.5vw), calc($size + 0.5vw), calc(($size / 2) + 0.2vw));
 
                 .fill {
-                    width: 8.13vw;
-                    height: 8.13vw;
+                    width: calc($size + 0.13vw);
+                    height: calc($size + 0.13vw);
                     position: absolute;
                     border-radius: 50%;
-                    clip: rect(0, 4.26vw, 8.5vw, 0);
+                    clip: rect(0, calc(($size / 2) + 0.25vw), calc($size + 0.5vw), 0);
                     background-color: white;
                     -webkit-transform: rotate($deg);
                         -ms-transform: rotate($deg);
@@ -147,8 +147,8 @@ $white-back: #d9e2f7;
       
       .white {
         background-color: white;
-        width: 5.5vw;
-        height: 5.5vw;
+        width: calc($size / 1.45);
+        height: calc($size / 1.45);
         z-index: 2;
         -webkit-box-shadow: 0px 0px 20px 1px #000000 inset;
                 box-shadow: 0px 0px 20px 1px #000000 inset;
@@ -156,15 +156,15 @@ $white-back: #d9e2f7;
       
       .small {
         background-color: $back-color;
-        width: 2.5vw;
-        height: 2.5vw;
+        width: calc($size / 3.2);
+        height: calc($size / 3.2);
       }
 }
 
-@mixin language ($x,$y){
+@mixin language ($fs,$x,$y){
 
     p {
-        font-size: 2vw;
+        font-size: $fs;
         font-family: $title-font;
         color: $text-color;
         position: absolute;
@@ -543,36 +543,36 @@ $white-back: #d9e2f7;
             transition: opacity 0.5s;
 
             .circle1 {
-                @include whiteCircle (50%,10%,160deg,fillan);
-                @include language(13vw,7.75vw);
+                @include whiteCircle (8vw,50%,10%,160deg,fillan);
+                @include language(2vw,13vw,7.75vw);
             }
             .circle2 {
-                @include whiteCircle (50%,30%,140deg,fillen);
-                @include language(13vw,26.25vw);
+                @include whiteCircle (8vw,50%,30%,140deg,fillen);
+                @include language(2vw,13vw,26.25vw);
             }
             .circle3 {
-                @include whiteCircle (50%,50%,90deg,fillou);
-                @include language(13vw,45vw);
+                @include whiteCircle (8vw,50%,50%,90deg,fillou);
+                @include language(2vw,13vw,45vw);
             }
             .circle4 {
-                @include whiteCircle (50%,70%,40deg,fillon);
-                @include language(13vw,66vw);
+                @include whiteCircle (8vw,50%,70%,40deg,fillon);
+                @include language(2vw,13vw,66vw);
             }
             .circle5 {
-                @include whiteCircle (50%,90%,120deg,fillin);
-                @include language(13vw,83.75vw);
+                @include whiteCircle (8vw,50%,90%,120deg,fillin);
+                @include language(2vw,13vw,83.75vw);
             }
             .circle6 {
-                @include whiteCircle (50%,30%,110deg,filli);
-                @include language(13vw,27.5vw);
+                @include whiteCircle (8vw,50%,30%,110deg,filli);
+                @include language(2vw,13vw,27.5vw);
             }
             .circle7 {
-                @include whiteCircle (50%,50%,130deg,fillop);
-                @include language(13vw,47.5vw);
+                @include whiteCircle (8vw,50%,50%,130deg,fillop);
+                @include language(2vw,13vw,47.5vw);
             }
             .circle8 {
-                @include whiteCircle (50%,70%,60deg,fillun);
-                @include language(13vw,65.75vw);
+                @include whiteCircle (8vw,50%,70%,60deg,fillun);
+                @include language(2vw,13vw,65.75vw);
             }
         }
     }
@@ -1243,7 +1243,7 @@ $white-back: #d9e2f7;
                 z-index: 100;
                 padding: 8vw;
                 transition: right 0.5s ease-in-out;
-                border-radius: 0 0 0 5px;
+                border-radius: 0 0 0 10px;
                 background-color: $nav-color;
 
                 .close {
@@ -1323,9 +1323,10 @@ $white-back: #d9e2f7;
                     text-align: center;
                 }
                 p {
-                    margin: 2vw 0.2vw;
+                    margin: 4vw 0.2vw;
                     text-align: center;
                     font-size: 6vw;
+
                 }
                 .btn {
                     @include btn(8vw);
@@ -1333,7 +1334,80 @@ $white-back: #d9e2f7;
             }
         }
 
+        .skills {
 
+            .skillsdef {
+
+                .skillsimg {
+                    display: none;
+                }
+
+                .textskills {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 80%;
+                    margin-right: 0;
+
+                    h1 {
+                        font-size: 10vw;
+                        margin: 3vw auto;
+                        text-align: center;
+
+                    }
+                    p {
+                        font-size: 7vw;
+                        margin: 3vw auto;
+                        text-align: center;
+                    }
+                    button, .activeButton {
+                        width: 80%;
+                        margin: 5vw auto;
+                        font-size: 8vw;
+                        padding: 3vw 2vw;
+                        
+                    }
+                    
+                }
+            }
+
+            .circleskills {
+                height: 55vw;
+
+                .circle1 {
+                    @include whiteCircle (20vw,30%,20%,160deg,fillan);
+                    @include language(5vw,26vw,15vw);
+                }
+                .circle2 {
+                    @include whiteCircle (20vw,30%,50%,140deg,fillen);
+                    @include language(5vw,26vw,41vw);
+                }
+                .circle3 {
+                    @include whiteCircle (20vw,30%,80%,90deg,fillou);
+                    @include language(5vw,26vw,69vw);
+                }
+                .circle4 {
+                    @include whiteCircle (20vw,80%,35%,40deg,fillon);
+                    @include language(5vw,55vw,27vw);
+                }
+                .circle5 {
+                    @include whiteCircle (20vw,80%,65%,120deg,fillin);
+                    @include language(5vw,55vw,53vw);
+                }
+                .circle6 {
+                    @include whiteCircle (20vw,30%,30%,110deg,filli);
+                    @include language(5vw,26vw,25vw);
+                }
+                .circle7 {
+                    @include whiteCircle (20vw,30%,70%,130deg,fillop);
+                    @include language(5vw,26vw,65vw);
+                }
+                .circle8 {
+                    @include whiteCircle (20vw,80%,50%,60deg,fillun);
+                    @include language(5vw,55vw,43vw);
+                }
+            }
+        }
 
     }
     

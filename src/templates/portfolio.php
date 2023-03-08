@@ -7,9 +7,7 @@
             <li class="point1"></li>
             <li class="point2"></li>
         </ul>
-
     </div>
-
 
     <div class="blocsite">
         <div class="projet1" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="100">
@@ -25,11 +23,11 @@
         </div>
         <div class="projet2" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="100">
             <h3>Ancrage</h3>
-            <p>Projet de site web consacré à l'écologie tenue par une psychologue.</p>
+            <p>Projet de site web consacré à l'écologie tenue par une psychologue. (en cour de développement)</p>
             <span></span>
             <div>
-                <a href="https://jeremypettre.com/">
-                    <i class="fa-solid fa-arrow-left"></i>
+                <a>
+                    <i class="fa-solid fa-spinner"></i>
                 </a>
                 <img src="./assets/images/ju-site.webp" alt="">
             </div>
@@ -37,4 +35,5 @@
     </div>
 
 </section>
+
 

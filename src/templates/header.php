@@ -2,7 +2,7 @@
 <section class="head">
     <div class="bloc1">
         <h2>Bienvenue, je suis Kevin, développeur web</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus ante nisl, sed dignissim erat iaculis at. Aenean imperdiet lacinia dui, vel porttitor urna vehicula quis. Nulla maximus justo mi. Nullam faucibus nunc quis lacus hendrerit faucibus. Aenean aliquet sem nec pulvinar semper.</p>
+        <p>Je m'occupe de la création de sites et d'applications web, ainsi que de leur maintenance, de leur mise à jour et de leur amélioration continue. je peux travailler en collaboration avec des graphistes et des designers et je m'assure que l'aspect visuel du site est en accord avec les besoins du client.</p>
         <a href="#about" class="btn">En savoir plus</a>
     </div>
     <div class="bloc2">

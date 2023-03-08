@@ -5,7 +5,7 @@
         </div>
         <div class="textskills">
             <h1>Compétences</h1>
-            <p>j'ai pus développer mes compétences et mes langages aux cours de ma formation et des projets réalisés.Aliquam erat volutpat. Quisque euismod aliquet ex, et dictum nibh malesuada vel. Suspendisse pulvinar sollicitudin elit accumsan porta.</p>
+            <p>j'ai pus développer mes compétences et mes langages aux cours de ma formation et des projets réalisés. J'utilise du HTML, du SCSS, du javascript et du php principalement, mais je peux utiliser d'autres technologies suivant le projet.</p>
             <button class="activeButton" id="front">front-end</button>
             <button id="back">back-end</button>
         </div>

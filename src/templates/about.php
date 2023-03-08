@@ -19,7 +19,7 @@
         </div>
         <div class="textme" id="photo">
             <h4>Photographie</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat mauris ut massa posuere dignissim a eget quam. Morbi vitae leo justo. Praesent in nulla sem. Praesent ipsum metus, sagittis quis risus quis, varius pharetra ante. Donec tincidunt nibh a ligula fringilla interdum. Proin vitae turpis massa. Aliquam tristique, felis condimentum feugiat consectetur, massa dolor luctus lacus, ac rhoncus nunc velit eget libero. Donec a consequat nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean magna leo, elementum et eros vel, facilisis ultricies leo.</p>
+            <p>passionnée par la photographie, j'utilise mon temps libre pour explorer le monde qui m'entoure avec mon appareil photo. Je me suis essayé à differents type de photo comme la photographie de paysage, la photographie de rue, la photographie de portrait ou la photographie animalière. Je suis donc à même de pouvoir réalisé des photos sur demande si nécessaire. </p>
         </div>
     </div>
 

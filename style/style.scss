@@ -483,6 +483,7 @@ $white-back: #d9e2f7;
                     font-family: $text-font;
                     font-size: 1.1vw;
                     margin-left: 2vw;
+                    margin-bottom: 1.5vw;
                 }
                 button {
                     width: 70%;
@@ -917,7 +918,7 @@ $white-back: #d9e2f7;
                 -ms-flex-pack: justify;
                     justify-content: space-between;
             width: 50%;
-            height: 64vw;
+            height: 66vw;
             margin: 4vw auto;
             background-color: $nav-color;
             border-radius: 40px;
@@ -1078,7 +1079,12 @@ $white-back: #d9e2f7;
                     color: $text-color;
                     background-color: transparent;
                 }
-    
+                
+                .btn2 {
+                    @include btn(1.5vw);
+                    margin-bottom: 3vw;
+                }
+
                 .btn {
                     @include btn(1.5vw);
                     margin-bottom: 3vw;
@@ -1206,7 +1212,8 @@ $white-back: #d9e2f7;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+    
     .high {
 
         .header_desktop {
@@ -1215,9 +1222,17 @@ $white-back: #d9e2f7;
 
         .header_mobile {
 
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             position: relative;
 
             img {
@@ -1242,6 +1257,8 @@ $white-back: #d9e2f7;
                 right: -60vw;
                 z-index: 100;
                 padding: 8vw;
+                -webkit-transition: right 0.5s ease-in-out;
+                -o-transition: right 0.5s ease-in-out;
                 transition: right 0.5s ease-in-out;
                 border-radius: 0 0 0 10px;
                 background-color: $nav-color;
@@ -1274,7 +1291,13 @@ $white-back: #d9e2f7;
 
         .head {
 
-            flex-direction: column-reverse;
+            -webkit-box-orient: vertical;
+
+            -webkit-box-direction: reverse;
+
+                -ms-flex-direction: column-reverse;
+
+                    flex-direction: column-reverse;
 
             .bloc2 {
                 margin: 10vw auto;
@@ -1312,7 +1335,9 @@ $white-back: #d9e2f7;
 
             .bloc1 {
                 margin: 5vw auto;
-                align-items: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
                 width: 90%;
                 padding: 1vw;
 
@@ -1343,9 +1368,16 @@ $white-back: #d9e2f7;
                 }
 
                 .textskills {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     width: 80%;
                     margin-right: 0;
 
@@ -1356,7 +1388,7 @@ $white-back: #d9e2f7;
 
                     }
                     p {
-                        font-size: 7vw;
+                        font-size: 6vw;
                         margin: 3vw auto;
                         text-align: center;
                     }
@@ -1409,6 +1441,282 @@ $white-back: #d9e2f7;
             }
         }
 
+        .portfolio {
+
+            margin-top: 15vw;
+            height: auto;
+
+            h2 {
+                font-size: 10vw;
+            }
+
+            .vertical-line {
+                display: none;
+            }
+
+            .blocsite {
+                justify-items: center;
+                
+                .projet1 {
+
+                    -webkit-box-align: center;
+
+                        -ms-flex-align: center;
+
+                            align-items: center;
+                    -ms-grid-column-align: center;
+                        justify-self: center;
+                    width: 80%;
+                    margin: 7vw 3vw;
+
+                    h3 {
+                        font-size: 7vw;
+                    }
+                    p {
+                        font-size: 5vw;
+                        text-align: center;
+                        padding: 6vw 1vw;
+                    }
+                    div {
+                        a {
+                            i {
+                                font-size: 10vw;
+                            }
+                        }
+                    }
+                }
+                .projet2 {
+
+                    -webkit-box-align: center;
+
+                        -ms-flex-align: center;
+
+                            align-items: center;
+                    -ms-grid-column-align: center;
+                        justify-self: center;
+                    width: 80%;
+                    margin: 7vw 3vw;
+
+                    h3 {
+                        font-size: 7vw;
+                    }
+                    p {
+                        font-size: 5vw;
+                        text-align: center;
+                        padding: 6vw 1vw;
+                    }
+                    div {
+                        a {
+                            i {
+                                font-size: 10vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+            
+            border-radius: 20px;
+            
+            h3 {
+                font-size: 10vw;
+                padding: 2vw;
+                text-align: center;
+                margin: 6vw 1vw;
+            }
+
+            .aboutbloc {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+
+                .menu {
+                    width: 90%;
+                    border-radius: 10px;
+
+                    .activeButton {
+                        font-size: 5.9vw;
+                        padding: 1.90vw 0vw;
+                    }
+                    button {
+                        width: 90%;
+                        font-size: 6vw;
+                        margin: 3vw 1vw;
+                        padding: 2vw 0vw;
+                    }
+                }
+                .textme {
+                    width: 95%;
+                    height: auto;
+
+                    h4 {
+                        font-size: 6vw;
+                        text-align: center;
+                    }
+                    p {
+                        font-size: 5vw;
+                        text-align: center;
+                        padding: 0.5vw;
+                    }
+                }
+            }
+        }
+
+        .contact {
+
+            h3 {
+                font-size: 10vw;
+                text-align: center;
+                margin: 10vw 4vw;
+            }
+
+            .backto {
+
+                margin: 7vw 3vw;
+                i {
+                    font-size: 7vw;
+                }
+                p {
+                    font-size: 6vw;
+                }
+            }
+            .blocContact {
+                width: 85%;
+                border-radius: 20px;
+
+                h4 {
+                    font-size: 7vw;
+                    text-align: center;
+                    padding: 3vw 2vw;
+                }
+                p {
+                    font-size: 4vw;
+                }
+                .btn {
+                    font-size: 6vw;
+                }
+            }
+
+            .formbloc {
+                width: 85%;
+                height: auto;
+                margin-bottom: 10vw;
+
+                .coor {
+                    width: 40%;
+                    margin: 5vw;
+                    padding: 15vw 0vw 0vw 5vw;
+
+                    div {
+
+                        i {
+                            font-size: 7vw;
+                            margin: 1vw 2vw;
+                        }
+                        span {
+                            height: 4vw;
+                        }
+                        p {
+                            font-size: 5vw;
+                            margin: 1vw 2vw;
+                        }
+                    }
+                    p {
+                        font-size: 3vw;
+                        margin-left: 2vw;
+                    }
+                    ul {
+                        li {
+                            a {
+                                font-size: 4vw;
+                                margin-left: 2vw;
+                            }
+                        }
+                    }
+                }
+
+                .errorContact {
+
+                    p {
+                        font-size: 4vw;
+                    }
+                }
+
+                .success {
+                    p {
+                        font-size: 4vw;
+                    }
+                }
+                form {
+                    width: 80%;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+
+                    i {
+                        font-size: 3vw;
+                        top: 4vw;
+                        left: 6vw;
+                    }
+
+                    label {
+                        font-size: 6vw;
+                        margin: 4vw 1vw;
+                    }
+
+                    div {
+                        .inputS {
+                            height: 5vw;
+                            font-size: 4vw;
+                        }
+                    }
+
+                    .inputB {
+                        height: 5vw;
+                        font-size: 4vw;
+                    }
+                    .textArea {
+                        height: 10vw;
+                        font-size: 4vw
+                    }
+                    .btn {
+                        font-size: 6vw;
+                    }
+                }
+            }
+        }
+
+        footer {
+            .footer-container {
+                .footer-menu {
+                    ul {
+                        li {
+                            a {
+                                font-size: 5vw;
+                            }
+                        }
+                    }
+                }
+
+                .footer-social {  
+                    ul {
+                        li {
+                            a {
+                                font-size: 5vw;
+                            }
+                        }
+                    }       
+                }
+            }
+        }
     }
     
 }

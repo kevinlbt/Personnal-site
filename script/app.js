@@ -177,4 +177,14 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.classList.remove('active-menu');
     })
 
+
+    const formButtonDisabled = document.getElementById("formButtonDisabled");
+
+    if (formButtonDisabled.hasAttribute("disabled")) {
+        formButtonDisabled.style.color = "gray";
+        formButtonDisabled.classList.remove("btn");
+        formButtonDisabled.classList.add("btn2");
+    }
+        
+    
 });

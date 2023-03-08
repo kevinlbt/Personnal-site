@@ -240,6 +240,7 @@
   font-family: "Lato", sans-serif;
   font-size: 1.1vw;
   margin-left: 2vw;
+  margin-bottom: 1.5vw;
 }
 .high .skills .skillsdef .textskills button {
   width: 70%;
@@ -1106,7 +1107,7 @@
   align-items: center;
   justify-content: space-between;
   width: 50%;
-  height: 64vw;
+  height: 66vw;
   margin: 4vw auto;
   background-color: #222a3f;
   border-radius: 40px;
@@ -1221,6 +1222,31 @@
   color: white;
   background-color: transparent;
 }
+.high .contact .formbloc form .btn2 {
+  background-color: #cc5216;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 0.5vw;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: "Iceberg", cursive;
+  border: none;
+  cursor: pointer;
+  --c: #cc5216; /* the color */
+  --b: .15vw; /* border length*/
+  --d: 0.6vw; /* the cube depth */
+  --_s: calc(var(--d) + var(--b));
+  color: var(--c);
+  border: solid rgba(0, 0, 0, 0);
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+  transform: translate(calc(var(--d) / -1), var(--d));
+  -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  transition: 0.5s;
+  margin-bottom: 3vw;
+}
 .high .contact .formbloc form .btn {
   background-color: #cc5216;
   color: #fff;
@@ -1312,7 +1338,7 @@
   color: #cc5216;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .high .header_desktop {
     display: none;
   }
@@ -1494,7 +1520,7 @@
     text-align: center;
   }
   .high .skills .skillsdef .textskills p {
-    font-size: 7vw;
+    font-size: 6vw;
     margin: 3vw auto;
     text-align: center;
   }
@@ -2010,5 +2036,192 @@
     top: 55vw;
     left: 43vw;
     padding-top: 1vw;
+  }
+  .high .portfolio {
+    margin-top: 15vw;
+    height: auto;
+  }
+  .high .portfolio h2 {
+    font-size: 10vw;
+  }
+  .high .portfolio .vertical-line {
+    display: none;
+  }
+  .high .portfolio .blocsite {
+    justify-items: center;
+  }
+  .high .portfolio .blocsite .projet1 {
+    align-items: center;
+    justify-self: center;
+    width: 80%;
+    margin: 7vw 3vw;
+  }
+  .high .portfolio .blocsite .projet1 h3 {
+    font-size: 7vw;
+  }
+  .high .portfolio .blocsite .projet1 p {
+    font-size: 5vw;
+    text-align: center;
+    padding: 6vw 1vw;
+  }
+  .high .portfolio .blocsite .projet1 div a i {
+    font-size: 10vw;
+  }
+  .high .portfolio .blocsite .projet2 {
+    align-items: center;
+    justify-self: center;
+    width: 80%;
+    margin: 7vw 3vw;
+  }
+  .high .portfolio .blocsite .projet2 h3 {
+    font-size: 7vw;
+  }
+  .high .portfolio .blocsite .projet2 p {
+    font-size: 5vw;
+    text-align: center;
+    padding: 6vw 1vw;
+  }
+  .high .portfolio .blocsite .projet2 div a i {
+    font-size: 10vw;
+  }
+  .high .about {
+    border-radius: 20px;
+  }
+  .high .about h3 {
+    font-size: 10vw;
+    padding: 2vw;
+    text-align: center;
+    margin: 6vw 1vw;
+  }
+  .high .about .aboutbloc {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .high .about .aboutbloc .menu {
+    width: 90%;
+    border-radius: 10px;
+  }
+  .high .about .aboutbloc .menu .activeButton {
+    font-size: 5.9vw;
+    padding: 1.9vw 0vw;
+  }
+  .high .about .aboutbloc .menu button {
+    width: 90%;
+    font-size: 6vw;
+    margin: 3vw 1vw;
+    padding: 2vw 0vw;
+  }
+  .high .about .aboutbloc .textme {
+    width: 95%;
+    height: auto;
+  }
+  .high .about .aboutbloc .textme h4 {
+    font-size: 6vw;
+    text-align: center;
+  }
+  .high .about .aboutbloc .textme p {
+    font-size: 5vw;
+    text-align: center;
+    padding: 0.5vw;
+  }
+  .high .contact h3 {
+    font-size: 10vw;
+    text-align: center;
+    margin: 10vw 4vw;
+  }
+  .high .contact .backto {
+    margin: 7vw 3vw;
+  }
+  .high .contact .backto i {
+    font-size: 7vw;
+  }
+  .high .contact .backto p {
+    font-size: 6vw;
+  }
+  .high .contact .blocContact {
+    width: 85%;
+    border-radius: 20px;
+  }
+  .high .contact .blocContact h4 {
+    font-size: 7vw;
+    text-align: center;
+    padding: 3vw 2vw;
+  }
+  .high .contact .blocContact p {
+    font-size: 4vw;
+  }
+  .high .contact .blocContact .btn {
+    font-size: 6vw;
+  }
+  .high .contact .formbloc {
+    width: 85%;
+    height: auto;
+    margin-bottom: 10vw;
+  }
+  .high .contact .formbloc .coor {
+    width: 40%;
+    margin: 5vw;
+    padding: 15vw 0vw 0vw 5vw;
+  }
+  .high .contact .formbloc .coor div i {
+    font-size: 7vw;
+    margin: 1vw 2vw;
+  }
+  .high .contact .formbloc .coor div span {
+    height: 4vw;
+  }
+  .high .contact .formbloc .coor div p {
+    font-size: 5vw;
+    margin: 1vw 2vw;
+  }
+  .high .contact .formbloc .coor p {
+    font-size: 3vw;
+    margin-left: 2vw;
+  }
+  .high .contact .formbloc .coor ul li a {
+    font-size: 4vw;
+    margin-left: 2vw;
+  }
+  .high .contact .formbloc .errorContact p {
+    font-size: 4vw;
+  }
+  .high .contact .formbloc .success p {
+    font-size: 4vw;
+  }
+  .high .contact .formbloc form {
+    width: 80%;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+  }
+  .high .contact .formbloc form i {
+    font-size: 3vw;
+    top: 4vw;
+    left: 6vw;
+  }
+  .high .contact .formbloc form label {
+    font-size: 6vw;
+    margin: 4vw 1vw;
+  }
+  .high .contact .formbloc form div .inputS {
+    height: 5vw;
+    font-size: 4vw;
+  }
+  .high .contact .formbloc form .inputB {
+    height: 5vw;
+    font-size: 4vw;
+  }
+  .high .contact .formbloc form .textArea {
+    height: 10vw;
+    font-size: 4vw;
+  }
+  .high .contact .formbloc form .btn {
+    font-size: 6vw;
+  }
+  .high footer .footer-container .footer-menu ul li a {
+    font-size: 5vw;
+  }
+  .high footer .footer-container .footer-social ul li a {
+    font-size: 5vw;
   }
 }/*# sourceMappingURL=style.css.map */

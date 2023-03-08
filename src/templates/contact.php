@@ -37,6 +37,7 @@
         <div class="success">
             <p class="green"><?php echo WebsiteController::getSuccess() ?></p>
         </div>
+
         <form method="POST">
             <i class="fa-solid fa-circle-xmark" id="cross"></i>
             <label for="name">Nom</label>
@@ -50,7 +51,7 @@
             <input type="text" name="subject" id="subject" class="inputB" placeholder=" site internet">
             <label for="textarea" class="">Message</label>
             <textarea name="message" id="textarea" cols="70" class="textArea"></textarea>
-            <button type="submit" class="btn">Envoyer</button>
+            <button id="formButtonDisabled" <?php if(isset($_SESSION["formSend"]) && $_SESSION["formSend"] === true) { echo "disabled";} ?> type="submit" class="btn">Envoyer</button>
         </form>
     </div>
 

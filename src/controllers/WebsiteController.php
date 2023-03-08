@@ -63,7 +63,7 @@ class WebsiteController extends AbstractController {
                         $mail->Host = 'smtp.gmail.com';  
                         $mail->SMTPAuth = true;                               
                         $mail->Username = 'kevin.lebot@gmail.com';                 
-                        $mail->Password = 'oiscblvzembworiv';                          
+                        $mail->Password = 'undymoaodnbenrbq';                          
                         $mail->SMTPSecure = 'tls';                            
                         $mail->Port = 587;                                    
             
@@ -80,6 +80,7 @@ class WebsiteController extends AbstractController {
             
                         if ($mail->send()) {
                             self::$success = "Mail envoyé ! Merci pour votre interêt";
+                            $_SESSION["formSend"] = true;
                             header ("Refresh: 5; URL = /my-site/ ");
                         } else {
                             self::$success = "Echec dans l'envoi du mail";

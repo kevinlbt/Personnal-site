@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="my-site"/>
-    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="personnal website - kevin le bot web developper"/>
+    <meta name="keywords" content="kevin, web, developper, website"/>
     <meta name="Kevin le bot" content="kevin le bot" />
     <meta name="copyright" content="kevin le bot" />
     <meta name="robots" content="index, follow"/>
     <meta http-equiv="expires" content="43200"/>
    
+    <!-- HTML Meta Tags -->
+    <title>Kevin le bot</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://kevinlebot.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="kevin">
+    <meta property="og:description" content="personnal website of kevin - dev web">
+    <meta property="og:image" content="./assets/logo/logo2.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="kevinlebot">
+    <meta property="twitter:url" content="https://kevin-lebot.com/">
+    <meta name="twitter:title" content="kevin">
+    <meta name="twitter:description" content="personnal website of kevin - dev web">
+    <meta name="twitter:image" content="./assets/logo/logo2.png">
+
+    <link rel="icon" type="image/x-icon" href="./assets/logo/logo2.png">
     <link href="./style/style.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

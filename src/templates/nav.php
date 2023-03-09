@@ -1,7 +1,7 @@
 
 <nav class="header_desktop">
     <!-- Logo à gauche -->
-    <img src="/kevinlebot.com/assets/logo/logo2.png"/>
+    <img src="https://kevinlebot.com/assets/logo/logo2.png"/>
 
     <!-- Menu au centre -->
     <ul>
@@ -15,7 +15,7 @@
 </nav>
 
 <nav class="header_mobile">
-    <img src="/kevinlebot.com/assets/logo/logo2.png" alt="" />
+    <img src="https://kevinlebot.com/assets/logo/logo2.png" alt="" />
     <i id="burger" class="fa-solid fa-bars"></i>
     <div id="menu" class="menu">
         <a id="closeBtn" class="close">&times;</a>

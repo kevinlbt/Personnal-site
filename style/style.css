@@ -2193,6 +2193,7 @@
   }
   .high .contact .blocContact .btn {
     font-size: 6vw;
+    margin-right: 1vw;
   }
   .high .contact .formbloc {
     width: 85%;
@@ -2257,6 +2258,7 @@
   }
   .high .contact .formbloc form .btn {
     font-size: 6vw;
+    margin-right: 1vw;
   }
   .high footer .footer-container .footer-menu ul li a {
     font-size: 5vw;

@@ -16,5 +16,5 @@
       </ul>
     </div>
   </div>
-
+  <a href="./legale/">Mentions Légales</a>
 </footer>

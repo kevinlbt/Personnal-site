@@ -102,5 +102,8 @@ class WebsiteController extends AbstractController {
 
     }
     
+    public static function legale () {
 
+        self::render('legale');
+    }
 }

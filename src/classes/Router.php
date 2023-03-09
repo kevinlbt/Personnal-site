@@ -31,6 +31,7 @@ class Router {
     public function addAllRoutes () {
         
         $this->addRoute('home',['WebsiteController','home']);
+        $this->addRoute('legale',['WebsiteController','legale']);
 
     }
     

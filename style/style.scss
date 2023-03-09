@@ -1142,6 +1142,8 @@ $white-back: #d9e2f7;
     }
 
     footer {
+        display: flex;
+        flex-direction: column;
         background-color: $nav-color;
         color: #fff;
         padding: 20px 0;
@@ -1207,6 +1209,53 @@ $white-back: #d9e2f7;
                         }
                     }
                 }
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $text-color;
+            font-size: 1vw;
+            text-align: center;
+        }
+    }
+
+    .legale {
+        width: 80%;
+        margin: 3vw auto;
+
+        p {
+            font-family: $text-font;
+            color: $text-color;
+            font-size: 1vw;
+            padding: 0.5vw;
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
+        }
+
+        .backto {
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 1vw 0;
+            margin: 4vw;
+            text-decoration: none;
+
+            i {
+                font-size: 3vw;
+                color: $text-color;
+                margin-right: 1vw;
+            }
+            p {
+                font-family: $title-font;
+                font-size: 2vw;
+                color: $text-color;
             }
         }
     }

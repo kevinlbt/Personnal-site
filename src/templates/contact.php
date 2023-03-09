@@ -2,7 +2,7 @@
 
     <h3 <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: none"';}?>>Contacter - moi</h3>
 
-    <a class="backto" href="http://localhost:8080/my-site/" <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: flex"';}?>>
+    <a class="backto" href="https://kevinlebot.com" <?php if(WebsiteController::getSuccess() || WebsiteController::getErrors()) {echo 'style="display: flex"';}?>>
         <i class="fa-solid fa-arrow-left"></i>
         <p> Revenir au site </p>
     </a>
